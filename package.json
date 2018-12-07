@@ -1,0 +1,36 @@
+{
+  "name": "@jiubao/hook",
+  "version": "0.0.1",
+  "description": "event on off trigger",
+  "main": "dist/hook.es.js",
+  "browser": "dist/hook.umd.js",
+  "module": "dist/hook.es.js",
+  "cjs": "dist/hook.cjs.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rm -rf dist && rollup -c && npm run minify",
+    "minify": "uglifyjs $npm_package_browser -cm -o $npm_package_browser",
+    "release": "npm run build && npm run minify && standard-version && git push --follow-tags && npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiubao/hook.git"
+  },
+  "keywords": [
+    "event",
+    "on",
+    "off",
+    "trigger"
+  ],
+  "author": "jiubao <xia.ldj@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiubao/hook/issues"
+  },
+  "homepage": "https://github.com/jiubao/hook#readme",
+  "devDependencies": {
+    "rollup": "^0.67.4",
+    "rollup-plugin-buble": "^0.19.4",
+    "standard-version": "^4.4.0"
+  }
+}
