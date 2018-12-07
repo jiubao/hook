@@ -1,6 +1,6 @@
 {
   "name": "@jiubao/hook",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "event on off trigger",
   "main": "dist/hook.es.js",
   "browser": "dist/hook.umd.js",
